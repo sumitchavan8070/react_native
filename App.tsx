@@ -59,13 +59,13 @@ function App(): React.JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
 
   const backgroundStyle = {
-    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
+    backgroundColor: isDarkMode ? Colors.darker : Colors.darker,
   };
 
   return (
     <SafeAreaView style={backgroundStyle}>
       <StatusBar
-        barStyle={isDarkMode ? 'light-content' : 'dark-content'}
+        barStyle={isDarkMode ? 'dark-content' : 'dark-content'}
         backgroundColor={backgroundStyle.backgroundColor}
       />
       <ScrollView
@@ -77,8 +77,7 @@ function App(): React.JSX.Element {
             backgroundColor: isDarkMode ? Colors.black : Colors.white,
           }}>
           <Section title="Step One">
-            Edit <Text style={styles.highlight}>App.tsx</Text> to change this
-            screen and then come back to see your edits.
+            Edit <Text style={styles.highlight}>App.tsx</Text> .
           </Section>
           <Section title="See Your Changes">
             <ReloadInstructions />
